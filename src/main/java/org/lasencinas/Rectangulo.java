@@ -1,29 +1,28 @@
 package org.lasencinas;
 
-public class Rectangulo {
+public class Rectangulo extends FiguraGeometrica {
 
-        private String nombre = null;
         private double altura = 0d;
         private double largo = 0d;
-
+/*---------------Constructor----------------*/
+        public Rectangulo(){
+            super();
+        }
 
         public Rectangulo(Double altura, Double largo){
+            super();
             this.altura = altura;
             this.largo = largo;
         }
 
 
         public Rectangulo(String nombre, Double altura, Double largo){
-            this.nombre = nombre;
+            super(nombre);
             this.altura = altura;
             this.largo = largo;
         }
 
  /*---------------------Getters-----------------------------*/
-        public String getNombre() {
-                return this.nombre;
-            }
-
         public double getAltura() {
             return this.altura;
         }
@@ -32,7 +31,9 @@ public class Rectangulo {
             return this.largo;
         }
 
-        public double getArea(){
+/*------------Lógica------------------------------------------*/
+        @Override
+        public Double area(){
             return getAltura() * getLargo();
         }
 }

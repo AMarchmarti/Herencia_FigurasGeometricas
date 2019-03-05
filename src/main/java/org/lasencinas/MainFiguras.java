@@ -11,7 +11,7 @@ public class MainFiguras
         Circulo circulo = new Circulo(5d);
         Circulo circuloSuper = new Circulo("circulo", 5d);
 
-        System.out.println( "Area del " + rectanguloSuper.getNombre() + "= " + rectangulo.getArea() );
-        System.out.println( "Area del " + circuloSuper.getNombre() + "= " + circulo.getArea() );
+        System.out.println( "Area del " + rectanguloSuper.getNombre() + "= " + rectangulo.area() );
+        System.out.println( "Area del " + circuloSuper.getNombre() + "= " + circulo.area() );
     }
 }

@@ -2,34 +2,34 @@ package org.lasencinas;
 
 import static java.lang.Math.PI;
 
-public class Circulo {
+public class Circulo extends FiguraGeometrica{
 
-        private String nombre = null;
         private double radio = 0d;
-
-
  /*--------------------Constructor-----------------*/
 
+        public Circulo(){
+            super();
+        }
+
         public Circulo(Double radio){
+            super();
             this.radio = radio;
         }
 
         public Circulo(String nombre, Double radio){
-            this.nombre = nombre;
+            super(nombre);
             this.radio = radio;
         }
 
 /*---------------------Getters----------------------*/
 
-    public String getNombre() {
-        return nombre;
-    }
-
     public double getRadio() {
         return radio;
     }
 
-    public Double getArea(){
+/*--------------------Lógica-----------------------------*/
+    @Override
+    public Double area(){
         return Math.pow(getRadio(), 2) * PI;
     }
 }
